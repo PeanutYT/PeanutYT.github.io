@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentines </title>
+
+    <style>
+body{
+
+background-image: url(wallpaperflare.com_wallpaper\ \(1\).jpg);
+
+
+}
+h1{
+    text-align: center;
+    color: black;
+}
+div{
+    text-align: center;
+ 
+}
+
+#yes{
+    background-color: rgb(6, 201, 6);
+    font-size: 50px;
+    top: 30%;
+
+    
+}
+#no{
+    background-color: rgb(252, 68, 68);
+    font-size: 50px;
+   
+       
+}
+button {
+       
+        transition: font-size 0.3s ease; /* Animacja przejścia */
+        position: absolute; /* Ustawienie przycisku na absolutną pozycję */
+        top: 50%; /* Domyślnie ustawienie na środek pionowo */
+        left: 50%; /* Domyślnie ustawienie na środek poziomo */
+        transform: translate(-50%, -50%); /* Centrowanie przycisku */
+    
+       
+        
+    }
+p{
+font-size: 30px;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+
+
+
+
+}
+
+   
+
+
+    </style>
+</head>
+<body>
+
+
+   <script>
+
+
+
+
+function rym() {
+    let yes = document.getElementById('yes');
+
+let no = document.getElementById('no');
+
+let div = document.getElementById('div');
+
+
+    let rym = document.getElementById('rym');
+
+rym.innerHTML = "Walentynką moją zostać chcesz" + "<br>" +
+"powód do radości więc już mam" + "<br>" +
+"sprawę sobie z tego pewnie zdajesz" + "<br>" +
+"słow na wiatr nie rzucam" + "<br>"+
+"z radości oczy jak złotówek pięć" + "<br>" +
+"mając Ciebie normalne to jest" + "<br>" +
+"nie ma tu żadnych zacięć" + "<br>" +
+"i nie ma miejsca na żaden protest" + "<br>" +
+"bo moja miłość do Ciebie większa jest niż Mount Everest ";
+
+
+div.style.visibility = "hidden";
+no.style.visibility = "hidden";
+
+
+}
+
+
+
+
+function losowaPozycja() {
+    var button = document.getElementById('no');
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
+    var newLeft = Math.random() * (windowWidth - button.offsetWidth);
+    var newTop = Math.random() * (windowHeight - button.offsetHeight);
+    button.style.left = newLeft + 'px';
+    button.style.top = newTop + 'px';
+}
+
+
+
+
+
+
+   </script>
+
+
+
+
+<h1>Czy na pewno chcesz być moją walentynką?</h1>
+
+
+
+
+<hr>
+<div id="div">
+
+
+    <button id="yes" onclick="rym()">YES</button>
+    <button id="no" onclick="losowaPozycja()">NO</button>
+
+</div>
+
+
+
+<p id="rym">
+
+
+
+</p>
+
+
+
+
+
+
+
+</body>
+</html>
